@@ -29,6 +29,9 @@
 
 goal of cicd - achieve end to end autoamtion
 
+![image](https://user-images.githubusercontent.com/129314018/235719214-a2dab7e2-ff88-441d-a7d8-56c17a4180fd.png)
+
+
 ## CI/CD - Jenkins to GitHub App deployment
 
 ### Pre-requisites
