@@ -29,36 +29,65 @@
 
 goal of cicd - achieve end to end autoamtion
 
+### Jenkins - GitHub
+
+1. Pre-requisites to starting with Jenkins, follow [Using SSH with GitHub](https://github.com/mthussain1234/test-ssh#using-ssh-with-github)
+2. Make your keys, we had named them `mohammad-jenkins-key`, and be sure to follow the documentation, also make sure the `app` folders are cloned, as you can see in the contents of this github repository.
+3. On Jenkins, click `New Item`.
+
 ![image](https://user-images.githubusercontent.com/129314018/235678316-948b83c1-5034-4647-afc6-eb37d9e21a99.png)
+
+4. On the next page, enter the name we use `mohammad-CI` similar naming conventions are allowed, and select `freestyle project` and click Ok
 
 ![image](https://user-images.githubusercontent.com/129314018/235678494-d680aede-a141-4cfb-94be-fbec8ba44806.png)
 
+5. On the next page, do your description as you please, we do it as shown below, select `Discard old builds`, and as shown below check the `Github project` to allow for the use of the app folder as discussed below
+6. On the GitHub repository also shown below, copy the `HTTPS` link of the repo and copy it into the Jenkins `project url`
+
 ![image](https://user-images.githubusercontent.com/129314018/235699049-7c83fc8f-8cb6-4b6a-acb5-de1ec5cb4618.png)
+
+7. Scrolling down, check the box as shown below, and type `sparta ubuntu node` and click the popup, on the label expression.
 
 ![image](https://user-images.githubusercontent.com/129314018/235699355-d16b50b9-4c53-4e23-9c72-5c3dccc3012b.png)
 
+8. On Source code management click `Git`, and on repository URL, we can see below on the repository we click `Code` then click `ssh` and copy and paste that url in the repository URL.
+
 ![image](https://user-images.githubusercontent.com/129314018/235699909-30280628-5d2a-4579-8d07-663401c952ea.png)
+
+9. You may be met with an error, if so click the `add` as shown below and click `Jenkins`
 
 ![image](https://user-images.githubusercontent.com/129314018/235700005-71b70e29-4420-4a4e-ac09-6b71c419f3ed.png)
 
+10. A pop up should appear, and the ssh keys we created before hand, using GitBash, navigate to `ssh` folder and do `cat <private-key>` and copy the private key.
+11. We then click the SSH dropdown on `Kind` and enter the key-name on Username, so they match
+12. On `private key` click `enter directly` and paste your private key in the box as shown below, and press add.
+
 ![image](https://user-images.githubusercontent.com/129314018/235700561-3e5456a1-9277-4583-966f-7a451112aecf.png)
+
+13. On branches to build, change `master` to `main` as that is the branch we are using
 
 ![image](https://user-images.githubusercontent.com/129314018/235702105-133d4640-edde-4ede-845a-13e4414f9e6d.png)
 
+14. On Build environment, check the `provide node & npm ...` as shown below
+
 ![image](https://user-images.githubusercontent.com/129314018/235702267-97a23956-71c9-4517-90d2-d43933c4894d.png)
+
+15. Scrolling down, `add build step` then click execute shell.
 
 ![image](https://user-images.githubusercontent.com/129314018/235702442-b3d41f78-436e-4449-bb11-99f7c14f81ee.png)
 
-In `execute shell` enter : 
+16. In `execute shell` enter (and save after) : 
 ```
 cd app
 npm install
 npm test
 ```
 
-Then save.
+17. Click `Build now` and wait for the build history to update, when the new build shows up, click the dropdown as shown below, and click `console output`
 
 ![image](https://user-images.githubusercontent.com/129314018/235704026-6c4ccbd1-c692-41eb-9598-e9ebcde7a55e.png)
+
+18. After clicking `console output` we can scroll down to see checks passed, and we can see what it can look like for a succesful test, shown below.
 
 ![image](https://user-images.githubusercontent.com/129314018/235704124-d9a22683-5a16-49d1-9cc3-f62c245a0076.png)
 
