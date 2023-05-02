@@ -34,23 +34,41 @@ goal of cicd - achieve end to end autoamtion
   <summary>[PREREQUISITES TO CLONE APP FOLDERS]</summary>
   We used the following commands in order to clone someones app folder and environment folder to our local machine
   which we in turn pushed to this repository.
-  ```479  git clone https://github.com/khanmaster/sre_jenkins_cicd.git
+  ```
+  479  git clone https://github.com/khanmaster/sre_jenkins_cicd.git
+  
   486  cp -R app /c/Users/tahir.LAPTOP-2JTDBK37/Documents/tech_221/CICD_tech221
+  
   490  cd sre_jenkins_cicd/
+  
   491  cp -R environment /c/Users/tahir.LAPTOP-2JTDBK37/Documents/tech_221/CICD_tech221
+  
   495  git add .
+  
   496  git commit -m "Cloned folders from other repository"
+  
   497  git push origin main
+  
   498  git fetch origin
+  
   499  git merge origin/main
+  
   500  cd Documents/
+  
   501  cd tech_221/
+  
   502  cd CICD_tech221/
+  
   503  ls
+  
   504  git status
+  
   505  git commit -m "first commit"
+  
   507  git status
+  
   509  git push
+  
   ```
 </details>
 
