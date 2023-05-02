@@ -28,3 +28,27 @@
 * Continuous Deployment goes one step further than continuous delivery, with this practice, every change that passes all stages of your production pipeline is released to your customers, there is no human intervention, and only a failed test will prevent a new change to be deployed to production.
 
 goal of cicd - achieve end to end autoamtion
+
+![image](https://user-images.githubusercontent.com/129314018/235678316-948b83c1-5034-4647-afc6-eb37d9e21a99.png)
+
+![image](https://user-images.githubusercontent.com/129314018/235678494-d680aede-a141-4cfb-94be-fbec8ba44806.png)
+
+![image](https://user-images.githubusercontent.com/129314018/235699049-7c83fc8f-8cb6-4b6a-acb5-de1ec5cb4618.png)
+
+![image](https://user-images.githubusercontent.com/129314018/235699355-d16b50b9-4c53-4e23-9c72-5c3dccc3012b.png)
+
+![image](https://user-images.githubusercontent.com/129314018/235699909-30280628-5d2a-4579-8d07-663401c952ea.png)
+![image](https://user-images.githubusercontent.com/129314018/235700005-71b70e29-4420-4a4e-ac09-6b71c419f3ed.png)
+![image](https://user-images.githubusercontent.com/129314018/235700561-3e5456a1-9277-4583-966f-7a451112aecf.png)
+
+
+
+# Steps
+
+* Generate new ssh key in .ssh folder
+* copy key to github repo where you have app code - repo -> settings
+* make a change to code and push to github
+* generate new ssh key called mohammad-jenkins, copy public key to repo and private key to jenkins - 
+* set up the webhook in github with jenkins end point - jenkins ip (includes port)
+* 
+
