@@ -32,6 +32,7 @@ goal of cicd - achieve end to end autoamtion
 ## CI/CD - Jenkins to GitHub App deployment
 <details>
   <summary>[PREREQUISITES TO CLONE APP FOLDERS]</summary>
+  
   We used the following commands in order to clone someones app folder and environment folder to our local machine
   which we in turn pushed to this repository.
   
