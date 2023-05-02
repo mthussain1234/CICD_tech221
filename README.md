@@ -31,6 +31,17 @@ goal of cicd - achieve end to end autoamtion
 
 ![image](https://user-images.githubusercontent.com/129314018/235719214-a2dab7e2-ff88-441d-a7d8-56c17a4180fd.png)
 
+* Local Host - represent local environment (computer)
+* GitHub via SSH - We use SSH to securely connect to GitHub repository
+* Jenkins via SSH - Will connect to the GitHub via SSH, allowing it to fetch code from the repository
+* Jenkins uses GitHub Status API to update status of commit/pull request, can show if deployment was successful or not
+* Jenkins also uses Deployment API to trigger and manage deployments
+* WebHook trigger lets GitHub send notifications to Jenkins when an event happens in the repository, this can be a code push/pull, makes Jenkins perform a build or deployment process, it is like a signal for Jenkins to perform the actions needed depending on what takes place within the repository
+* Master Node = Main jenkins server, Agent Node = computers, eg: EC2 instances
+* Jenkins will use master node to manage and schedule tasks
+* When there is lot of work, master node can share tasks with agent nodes, which perform tasks quickly by working on them simultaneously
+* The link between both master and agent is like master node is distributing tasks to the agent nodes, and they will recieve updates on the progress.
+
 
 ## CI/CD - Jenkins to GitHub App deployment
 
