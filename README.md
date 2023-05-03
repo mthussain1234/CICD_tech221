@@ -1,9 +1,5 @@
 # CICD, Jenkins, CDE (git pull local test)
 
-# code added from git branch - dev
-
-# automating with dev branch to merge v16
-
 # testing ci from github with tech221
 
 ## What is Jenkins
@@ -180,5 +176,18 @@ npm test
 5. Check Jenkins after pushing the new changes, and it should show you a new build being deployed as shown below.
 
 ![image](https://user-images.githubusercontent.com/129314018/235890506-64845f78-e9dc-4166-84db-cd6e5df40586.png)
+
+### TAS - MERGE - NEW BRANCH - JENKINS
+
+- Create new job called mohammad-ci-merge
+- create dev branch on local host and make change to readme
+- push to github which should trigger job
+- if test passed, merge code to main branch
+- create 3rd job to push code to production
+
+- create ec2 instance
+- create sg rule to allow jenkins ip
+- on build env on jenkins, provide node check, ssh agent, check and pick corresponding pem file
+- scp function, cd app, npm install npm test npm start
 
 
