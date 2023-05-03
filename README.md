@@ -1,4 +1,4 @@
-# CICD, Jenkins, CDE
+# CICD, Jenkins, CDE (git pull local test)
 
 # testing ci from github with tech221
 
