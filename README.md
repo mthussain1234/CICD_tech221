@@ -178,24 +178,3 @@ npm test
 ![image](https://user-images.githubusercontent.com/129314018/235890506-64845f78-e9dc-4166-84db-cd6e5df40586.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-# Steps
-
-* Generate new ssh key in .ssh folder
-* copy key to github repo where you have app code - repo -> settings
-* make a change to code and push to github
-* generate new ssh key called mohammad-jenkins, copy public key to repo and private key to jenkins - 
-* set up the webhook in github with jenkins end point - jenkins ip (includes port)
-* 
-
