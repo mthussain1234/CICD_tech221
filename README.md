@@ -2,7 +2,7 @@
 
 # code added from git branch - dev
 
-# automating with dev branch to merge v5
+# automating with dev branch to merge v6
 
 # testing ci from github with tech221
 
