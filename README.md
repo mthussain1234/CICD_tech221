@@ -1,5 +1,7 @@
 # CICD, Jenkins, CDE
 
+# testing ci from github with tech221
+
 ## What is Jenkins
 
 * Open source automation server, facilitates/helps continuous integration and continuous delivery (CI/CD) pipelines
@@ -149,6 +151,19 @@ npm test
 18. After clicking `console output` we can scroll down to see checks passed, and we can see what it can look like for a succesful test, shown below.
 
 ![image](https://user-images.githubusercontent.com/129314018/235704124-d9a22683-5a16-49d1-9cc3-f62c245a0076.png)
+
+### Webhook creation
+
+1. Create webhook for Jenkins/endpoint
+2. create a webhook in github for repo where we have app code
+3. test webhook - testing status code 200
+4. mke change to github readme and commit change
+
+![image](https://user-images.githubusercontent.com/129314018/235880570-4303e7c6-faed-4df1-bdd8-ee3a5bbecd2e.png)
+
+![image](https://user-images.githubusercontent.com/129314018/235880905-2b521219-6731-44aa-9d15-f685e2f00783.png)
+
+
 
 
 
