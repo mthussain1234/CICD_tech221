@@ -179,10 +179,36 @@ npm test
 
 ### TAS - MERGE - NEW BRANCH - JENKINS
 
-- Create new job called mohammad-ci-merge
-- create dev branch on local host and make change to readme
-- push to github which should trigger job
-- if test passed, merge code to main branch
+1. Create new job called mohammad-ci-merge, we do this by selecting our old mohammad-ci template
+2. create dev branch on local host and make change to readme
+3. we do this by `git branch dev` then `git checkout dev`
+4. push to github which should trigger job
+5. if test passed, merge code to main branch
+6. we now switch to our target branch which is `main` by `git checkout main`
+7. We then `git merge dev` which should merge our dev branch into the main branch
+8. `git add .` then `git commit -m "xxxx"` then `git push origin main` and it should push the new merged branch, and we can test this by checking Jenkins, and it should show a new build being deployed.
+9. Like before, it should show the updated code/readme on your GitHub
+
+#### Automating this
+
+1. Make a new job, we call it `mohammad-ci-merge-dev` and we as before create a template from `mohammad-ci-merge` and scroll down to source code management, additional behaviours and do as below. 
+
+![image](https://user-images.githubusercontent.com/129314018/235922617-a80f8139-a5a1-4582-bbdb-af5410d17680.png)
+
+2. On post build actions select git publisher, and select as shown below.
+
+![image](https://user-images.githubusercontent.com/129314018/235922782-0a335a5d-1f90-4ddb-82d7-d04342116821.png)
+
+3. Go to our `mohammad-ci-merge` job, scroll all the way down to post build actions and select post-build actions like below, and select the job we just created.
+
+![image](https://user-images.githubusercontent.com/129314018/235923005-8055aa4b-bb93-4d96-8af7-04fb1e943741.png)
+
+4. Save and we test as before, on GitBash, change code/readme, `git add .` -> `git commit -m "xxx"` -> `git push origin dev`.
+5. once done, it will deploy it on `mohammad-ci-merge` which will update it on the `dev` branch and as we did post build actions, this triggers the `mohammad-ci-merge-dev` job to deploy, this will merge the `dev` branch with the new changes with the `main branch`
+6. Test this by checking the repo on GitHub and navigating between both branches, and see if the changes made on the `dev` branch are the same as the `main` branch
+
+
+
 - create 3rd job to push code to production
 
 - create ec2 instance
