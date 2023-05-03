@@ -163,6 +163,9 @@ npm test
 
 ![image](https://user-images.githubusercontent.com/129314018/235880905-2b521219-6731-44aa-9d15-f685e2f00783.png)
 
+- save after checking box
+![image](https://user-images.githubusercontent.com/129314018/235882064-94742946-8745-4acc-8865-1d9d624a4c55.png)
+
 
 
 
