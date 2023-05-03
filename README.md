@@ -157,14 +157,26 @@ npm test
 1. Create webhook for Jenkins/endpoint
 2. create a webhook in github for repo where we have app code
 3. test webhook - testing status code 200
-4. mke change to github readme and commit change
+4. make change to github readme and commit change
 
 ![image](https://user-images.githubusercontent.com/129314018/235880570-4303e7c6-faed-4df1-bdd8-ee3a5bbecd2e.png)
 
 ![image](https://user-images.githubusercontent.com/129314018/235880905-2b521219-6731-44aa-9d15-f685e2f00783.png)
 
-- save after checking box
+- save after checking box as shown below
+
 ![image](https://user-images.githubusercontent.com/129314018/235882064-94742946-8745-4acc-8865-1d9d624a4c55.png)
+
+### On local machine - Jenkins 
+
+1. On GitBash, we navigate to our directory linked to repo.
+2. `git pull` to pull changes from the GitHub changes we made earlier
+3. `nano README.md` make some changes to test it
+4. `git add .` then `git commit -m "xxxx"` then `git push` to push it to the GitHub
+5. Check Jenkins after pushing the new changes, and it should show you a new build being deployed as shown below.
+
+![image](https://user-images.githubusercontent.com/129314018/235890506-64845f78-e9dc-4166-84db-cd6e5df40586.png)
+
 
 
 
