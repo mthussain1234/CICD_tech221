@@ -259,6 +259,9 @@ nohup node app.js > /dev/null 2>&1 &
   - we need linux env
   - ubuntu 18.04 lts
 - DO NOT USE APP OR DB AMI
+- sg group for jenkins master and agent node
+- HINT : Check github ports - connections IPs
+- once working - complete documentation for end to end automation
 
 
 
