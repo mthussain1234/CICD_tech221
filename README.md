@@ -246,3 +246,44 @@ nohup node app.js > /dev/null 2>&1 &
 ![image](https://user-images.githubusercontent.com/129314018/235997171-ba85ba80-e607-45e1-b950-3fd6b7b675cc.png)
 
 
+## Building Jenkins server o AWS
+
+- create ec2 on aws with correc linux distro (18.04)
+- set up jenkins master first - use t2.medium
+- rebuild pipeline
+- once it works
+- build testing node (agent node) - needs to launch when needed  -t2.micro
+- restrict build on agent/testing node
+- dependencies for Jenkins Master and agent nodes
+  - node env
+  - we need linux env
+  - ubuntu 18.04 lts
+- DO NOT USE APP OR DB AMI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
