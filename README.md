@@ -1,5 +1,7 @@
 # CICD, Jenkins, CDE (git pull local test)
 
+#  testing my own cicd piplline on jenkins v1
+
 # testing ci from github with tech221
 
 ## What is Jenkins
