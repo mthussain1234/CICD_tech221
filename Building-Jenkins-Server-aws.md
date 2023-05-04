@@ -2,6 +2,9 @@
 
 # Diagram
 
+![image](https://user-images.githubusercontent.com/129314018/236290496-b796367d-30ef-4099-8d71-6f6b632dec3e.png)
+
+
 
 1. Create EC2 instance (we call this `mohammad-tech221-master-node`), using Ubuntu 18.04 LTS, should be present in recently used AMIs
 2. For Security groups for the EC2 instance, we use the following security groups:
